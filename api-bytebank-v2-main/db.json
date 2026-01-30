@@ -59,6 +59,14 @@
         }
       ],
       "saldo": 3500
+    },
+    {
+      "id": "2052be40-914c-4af9-b5e7-f545ca36181e",
+      "nome": "neto",
+      "email": "neto@qa.com",
+      "senha": "123456",
+      "transacoes": [],
+      "saldo": 0
     }
   ]
 }
