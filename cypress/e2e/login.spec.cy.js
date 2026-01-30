@@ -1,14 +1,21 @@
 import LoginActions from '../actions/LoginActions'
-describe('Funcionalidade Login', () => {
-  const usuario = {
-    email: 'neto@qacom',
-    senha: '123456'
-  }
-  it('passes', () => {
+describe('Login - Bytebank', () => {
+
+
+
+  it('Deve permitir login com credenciais válidos', () => {
+    const usuario = {
+      email: 'neto@qa.com',
+      senha: '123456'
+    }
     LoginActions.loginValido(usuario)
   })
 
-  it.only('login invalido', () => {
+  it('login invalido', () => {
+    const usuario = {
+      email: 'neto@qacom',
+      senha: '1234562'
+    }
     LoginActions.loginInvalido(usuario)
   });
 })
