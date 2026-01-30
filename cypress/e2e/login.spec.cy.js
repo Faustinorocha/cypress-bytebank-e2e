@@ -1,21 +1,18 @@
 import LoginActions from '../actions/LoginActions'
 describe('Login - Bytebank', () => {
-
-
+  let usuarios
+  beforeEach(() => {
+    cy.fixture('usuarios').then((dados) => {
+      usuarios = dados
+    })
+  });
 
   it('Deve permitir login com credenciais válidos', () => {
-    const usuario = {
-      email: 'neto@qa.com',
-      senha: '123456'
-    }
-    LoginActions.loginValido(usuario)
+      LoginActions.loginValido(usuarios.valido)
   })
 
-  it('login invalido', () => {
-    const usuario = {
-      email: 'neto@qacom',
-      senha: '1234562'
-    }
-    LoginActions.loginInvalido(usuario)
+  it('Deve impedir login com credenciais inválidas', function () {
+    LoginActions.loginInvalido(usuarios.invalido)
   });
+
 })
