@@ -1,6 +1,8 @@
 import LoginActions from '../actions/LoginActions'
 describe('Login - Bytebank', () => {
+
   let usuarios
+  
   beforeEach(() => {
     cy.fixture('usuarios').then((dados) => {
       usuarios = dados

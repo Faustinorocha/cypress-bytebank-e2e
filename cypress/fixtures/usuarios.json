@@ -1,7 +1,7 @@
 {
     "valido": {
         "email": "neto@qa.com",
-        "senha": "123456"
+        "senha": "Senha@123"
     },
     "invalido": {
         "email": "aa@aacom",

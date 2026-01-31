@@ -90,3 +90,10 @@ Os cenários abaixo foram mapeados, mas não fazem parte do MVP de automação:
 - Validação detalhada de extrato
 
 Esses cenários poderão ser incluídos em uma evolução futura do projeto.
+
+### Transferência inválida
+A aplicação Bytebank não possui validações explícitas para cenário inválidos
+no fluxo de transferência, como digitar conta de destino errada.
+
+Por esse motivo, o escopo de automação contepla apenas o fluxo válido,
+que representa o comportamento real do sistema.

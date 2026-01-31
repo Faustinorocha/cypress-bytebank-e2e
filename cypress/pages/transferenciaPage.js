@@ -2,14 +2,19 @@ import LoginActions from "../actions/LoginActions";
 
 class TransferenciaPage {
     
-
-    selecionarTipoTransacao() {
-        cy.getByData('select-opcoes').should('exist').select('Depósito')
+    obterSaldo() {
+        return cy.getByData('saldo').invoke('text')
     }
+
+    selecionarTipo(tipo) {
+        cy.getByData('select-opcoes').should('exist').select(tipo)
+    }
+
     preencherValor(valor) {
         cy.getByData('form-input').should('exist').type(valor)
     }
-    confirmarTransferencia() {
+
+    confirmar() {
         cy.getByData('realiza-transacao').click()
     }
 }
