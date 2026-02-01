@@ -1,18 +1,22 @@
 {
   "name": "cypress-bytebank",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000c\u0000y\u0000p\u0000r\u0000e\u0000s\u0000s\u0000-\u0000b\u0000y\u0000t\u0000e\u0000b\u0000a\u0000n\u0000k\u0000-\u0000e\u00002\u0000e\u0000\r\u0000 \u0000",
+  "description": "\u0000",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
-
+    "cypress:run": "cypress run",
+    "cypress:report": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^15.9.0"
+    "cypress": "^15.9.0",
+    "cypress-mochawesome-reporter": "^3.8.4",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^4.4.1",
+    "mochawesome-report-generator": "^6.3.2"
   }
 }
