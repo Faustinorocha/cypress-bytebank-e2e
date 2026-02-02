@@ -28,4 +28,25 @@ describe('API - Login', () => {
             expect(response.body.message).to.eq('E-mail ou senha incorretos')
         })
     })
+    it.only('Deve acessar rota protegida com token válido', () => {
+        cy.request({
+            method: 'POST',
+            url: `${Cypress.env('apiUrl')}/users/login`,
+            body: {
+                email: usuario.valido.email,
+                senha: usuario.valido.senha
+            }
+        }).then((loginResponse) => {
+            const token = loginResponse.body.access_token
+            expect(token).to.exist
+
+            cy.request({
+                method: 'GET',
+                url: '/home',
+                body: { Authorization: `Bearer ${token}`}
+            }).then((protectedResponse) => {
+                expect(protectedResponse.status).to.eq(200)
+            })
+        })
+    });
 });
