@@ -3,23 +3,15 @@ import TransferenciaActions from '../actions/TransferenciaActions';
 
 
 describe('Regressão - Fluxo principal Bytebank', () => {
-    let usuario;
-    let transacao;
+    const usuario = require('../fixtures/usuarios.json')
+    let transacao = require('../fixtures/transacao.json')
+
     beforeEach(() => {
-        cy.fixture('usuarios').then((dados) => {
-            usuario = dados
-            LoginActions.loginValido(usuario.valido)
-        })
-        cy.fixture('transacao').then((dados) => {
-            transacao = dados
-        })
+        LoginActions.loginValido(usuario.valido)
     });
-    it('Deve permitir login e realizar transferencia com sucesso', () => {
 
-        TransferenciaActions.transferenciaValida(transacao.transferencia)
-        
-
-
+    it('Deve executar o fluxo principal com sucesso', () => {
+        TransferenciaActions.transferenciaValidaEAtualizaSaldo(transacao.transferencia)
 
     });
 });

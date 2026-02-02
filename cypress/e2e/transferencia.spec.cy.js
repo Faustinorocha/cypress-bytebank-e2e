@@ -20,7 +20,7 @@ describe('Transferência - Bytebank', () => {
 
     it('Deve realizar uma transferencia válida', () => {
 
-        TransferenciaActions.transferenciaValida(transacao.transferencia)
+        TransferenciaActions.transferenciaValidaEAtualizaSaldo(transacao.transferencia)
     });
     it('Deve realizar depósito válido', () => {
         

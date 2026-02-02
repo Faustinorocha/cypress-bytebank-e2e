@@ -4,7 +4,7 @@ class TransferenciaAction {
     // BUG CONHECIDO:
     // O sistema permite transferência com valor maior que o saldo disponível.
     // Este teste valida o comportamento atual do sistema.
-    transferenciaValida(dados) {
+    transferenciaValidaEAtualizaSaldo(dados) {
         let saldoInicial
 
         TransferenciaPage.obterSaldo().then((saldoTexto) => {
@@ -24,7 +24,7 @@ class TransferenciaAction {
 
 
     depositoValida(dados) {
-       let saldoInicial
+        let saldoInicial
 
         TransferenciaPage.obterSaldo().then((saldoTexto) => {
             saldoInicial = this.converterSaldo(saldoTexto)
