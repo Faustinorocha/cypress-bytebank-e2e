@@ -10,7 +10,11 @@ describe('Login - Bytebank', () => {
   });
 
   it('Deve permitir login com credenciais válidos', () => {
-      LoginActions.loginValido(usuarios.valido)
+    cy.intercept('POST', '/users/login').as('loginRequest')
+    LoginActions.loginValido(usuarios.valido)
+    cy.wait('@loginRequest').then((interception) => {
+        expect(interception.response.statusCode).to.eq(200)
+    })
   })
 
   it('Deve impedir login com credenciais inválidas', function () {
