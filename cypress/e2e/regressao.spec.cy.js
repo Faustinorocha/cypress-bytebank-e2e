@@ -4,7 +4,7 @@ import TransferenciaActions from '../actions/TransferenciaActions';
 
 describe('Regressão - Fluxo principal Bytebank', () => {
     const usuario = require('../fixtures/usuarios.json')
-    let transacao = require('../fixtures/transacao.json')
+    const transacao = require('../fixtures/transacao.json')
 
     beforeEach(() => {
         LoginActions.loginValido(usuario.valido)

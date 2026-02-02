@@ -16,4 +16,7 @@ module.exports = defineConfig({
       return config;
     },
   },
+  env: {
+    apiUrl: 'http://localhost:8000' 
+  }
 });

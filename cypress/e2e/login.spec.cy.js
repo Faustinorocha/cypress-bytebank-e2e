@@ -1,4 +1,5 @@
 import LoginActions from '../actions/LoginActions'
+
 describe('Login - Bytebank', () => {
 
   let usuarios
@@ -10,7 +11,7 @@ describe('Login - Bytebank', () => {
   });
 
   it('Deve permitir login com credenciais válidos', () => {
-    
+
     cy.intercept('POST', '/users/login').as('loginRequest')
 
     LoginActions.loginValido(usuarios.valido)
