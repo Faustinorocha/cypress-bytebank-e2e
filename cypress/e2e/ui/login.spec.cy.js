@@ -1,4 +1,4 @@
-import LoginActions from '../actions/LoginActions'
+import LoginActions from '../../actions/LoginActions'
 
 describe('Login - Bytebank', () => {
 

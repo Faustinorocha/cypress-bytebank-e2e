@@ -1,5 +1,5 @@
-import LoginActions from "../actions/LoginActions";
-import TransferenciaActions from "../actions/TransferenciaActions";
+import LoginActions from "../../actions/LoginActions";
+import TransferenciaActions from "../../actions/TransferenciaActions";
 
 describe('Transferência - Bytebank', () => {
 
